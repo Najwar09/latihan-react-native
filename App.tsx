@@ -1,118 +1,153 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+  Image,
   StyleSheet,
   Text,
-  useColorScheme,
+  TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native';
+import React, {Component} from 'react';
+import gambar from './gambar.jpeg';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View>
+      <StylingComponent />
     </View>
   );
-}
+};
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+const StylingComponent = () => {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
+    <View>
+      {/* <Text style={styles.text}>Styling component</Text>
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'aqua',
+          borderWidth: 2,
+          borderColor: 'gold',
+          marginTop: 20,
+          marginLeft: 20,
+        }}
+      /> */}
+      <View
+        style={{
+          padding: 12,
+          borderWidth: 1,
+          borderColor: 'yellow',
+          backgroundColor: '#f2f2f2',
+          width: 212,
+          borderRadius: 8,
+        }}>
+        <Image
+          source={gambar}
+          style={{width: 188, height: 107, borderRadius: 8}}
+        />
+        <Text
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            color: 'black',
+            marginTop: 16,
+            fontSize: 14,
+            fontWeight: 'bold',
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+          Milad DCC
+        </Text>
+        <Text
+          style={{
+            color: '#f2994a',
+            marginTop: 14,
+            fontSize: 12,
+            fontWeight: 'bold',
+          }}>
+          1999-2024
+        </Text>
+        <Text
+          style={{
+            color: 'black',
+            marginTop: 12,
+            fontSize: 12,
+            fontWeight: '300',
+          }}>
+          Bira-Bulukumba
+        </Text>
+        <TouchableOpacity>
+          <View
+            style={{
+              backgroundColor: '#6fcf97',
+              paddingVertical: 6,
+              borderRadius: 25,
+              marginTop: 20,
+            }}>
+            <Text
+              style={{fontSize: 14, fontWeight: '600', textAlign: 'center'}}>
+              Join
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+const SampleComponent = () => {
+  return (
+    <View>
+      <View style={{width: 80, height: '50%', backgroundColor: 'red'}} />
+      <Text>Najwar</Text>
+      <Last />
+      <TextInput style={{borderWidth: 1}} />
+      <Foto />
+      <BoxGreen />
+    </View>
+  );
+};
+
+const Last = () => {
+  return (
+    <View>
+      <Text>ramadhan</Text>
+    </View>
+  );
+};
+
+const Foto = () => {
+  return (
+    <Image
+      source={{
+        uri: 'https://awsimages.detik.net.id/community/media/visual/2023/09/23/sosok-pembuat-patung-bung-karno-di-banyuasin_43.jpeg?w=600&q=90',
+      }}
+      style={{width: 100, height: 100}}
+    />
+  );
+};
+
+export class BoxGreen extends Component {
+  render() {
+    return (
+      <View>
+        <Text>ini adalah komponen yang terbuat dari class komponent</Text>
+        <Image
+          source={{
+            uri: 'https://awsimages.detik.net.id/community/media/visual/2023/09/23/sosok-pembuat-patung-bung-karno-di-banyuasin_43.jpeg?w=600&q=90',
+          }}
+          style={{width: 100, height: 100, borderRadius: 100}}
+        />
+        <Text>INI ADALAH CLASS KOMPONEN BOS</Text>
+      </View>
+    );
+  }
+}
 
 export default App;
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'orange',
+    marginLeft: 20,
+    marginTop: 40,
+  },
+});
