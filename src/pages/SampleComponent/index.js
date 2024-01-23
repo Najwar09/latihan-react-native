@@ -1,15 +1,9 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {Component} from 'react';
 
 const SampleComponent = () => {
   return (
-    <View style={{backgroundColor: 'yellow',}}>
+    <View style={{backgroundColor: 'yellow'}}>
       <View style={{width: 50, height: 900, backgroundColor: 'red'}} />
       <Text>Najwar</Text>
       <Last />
@@ -65,6 +59,5 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
 });
-
 
 export default SampleComponent;

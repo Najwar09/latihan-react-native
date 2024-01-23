@@ -1,11 +1,6 @@
-import {
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import React, {Component} from 'react';
-import gambar from './gambar.jpeg';
+import gambar from '../../assets/image/gambar.jpeg';
 
 const StylingComponent = () => {
   return (
