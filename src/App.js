@@ -14,6 +14,10 @@ import FlexBox from './pages/Flexbox';
 import Position from './pages/Position';
 import PropsDinamis from './pages/Props';
 import StateDinamis from './pages/State';
+import Communication from './pages/Communication';
+import Keranjang from './Components/Keranjang';
+import BasicJavascript from './pages/BasicJavascript';
+import CallApiWithVanilla from './pages/CallApiWithVanilla';
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -37,7 +41,10 @@ const App = () => {
         {/* <Text>Position</Text>
         <Position/> */}
         {/* <PropsDinamis/> */}
-        <StateDinamis/>
+        {/* <StateDinamis/> */}
+        {/* <Communication /> */}
+        {/* <BasicJavascript /> */}
+        <CallApiWithVanilla />
       </ScrollView>
     </View>
   );
