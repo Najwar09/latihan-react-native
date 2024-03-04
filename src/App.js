@@ -18,6 +18,7 @@ import Communication from './pages/Communication';
 import Keranjang from './Components/Keranjang';
 import BasicJavascript from './pages/BasicJavascript';
 import CallApiWithVanilla from './pages/CallApiWithVanilla';
+import CallApiWithAxios from './pages/CallApiWithAxios';
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -44,7 +45,8 @@ const App = () => {
         {/* <StateDinamis/> */}
         {/* <Communication /> */}
         {/* <BasicJavascript /> */}
-        <CallApiWithVanilla />
+        {/* <CallApiWithVanilla /> */}
+        <CallApiWithAxios/> 
       </ScrollView>
     </View>
   );
