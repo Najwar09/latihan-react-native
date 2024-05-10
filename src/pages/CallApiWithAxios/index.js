@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const CallApiWithAxios = () => {
+    
     const [dataUser, setDataUser] = useState({
         avatar: '',
         email: '',
@@ -19,23 +20,23 @@ const CallApiWithAxios = () => {
     const getDATA = async () => {
         try {
             const res = await axios.get('https://reqres.in/api/users/3')
-                    setDataUser(res.data.data);
-                    console.log(res.data.data)
+            setDataUser(res.data.data)
+            console.log(res.data.data)
         } catch (error) {
             alert(error.message)
         }
     }
 
     //   menyimpan data
-    const postData = async() => {
+    const postData = async () => {
         const dataForApi = {
             name: 'morpheus',
             job: 'leader',
         };
-        
+
         try {
             const res = await axios.post('https://reqres.in/api/users', dataForApi)
-                setJob(res.data)
+            setJob(res.data)
         } catch (error) {
             alert(error.message)
         }

@@ -1,13 +1,34 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "anggota": [
+    {
+      "id": "ff98",
+      "name": "Muhil",
+      "angkatan": "26",
+      "bc": "Muhil"
+    },
+    {
+      "id": "35dc",
+      "name": "Syaifulloh",
+      "angkatan": "26",
+      "bc": "Lulu"
+    },
+    {
+      "id": "b88b",
+      "name": "Farhan arif",
+      "angkatan": "26",
+      "bc": "Aan"
+    },
+    {
+      "id": "e05a",
+      "name": "Raihan",
+      "angkatan": "26",
+      "bc": "Reyy"
+    },
+    {
+      "id": "abaa",
+      "name": "April",
+      "angkatan": "26",
+      "bc": "April"
     }
-  }
+  ]
+}

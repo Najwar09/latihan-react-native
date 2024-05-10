@@ -19,6 +19,9 @@ import Keranjang from './Components/Keranjang';
 import BasicJavascript from './pages/BasicJavascript';
 import CallApiWithVanilla from './pages/CallApiWithVanilla';
 import CallApiWithAxios from './pages/CallApiWithAxios';
+import LocalApi from './pages/LocalApi';
+import Pembelajaran from './pages/Pembelajaran';
+import SlicingUi from './pages/SlicingUI';
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -31,8 +34,8 @@ const App = () => {
   // }, [])
 
   return (
-    <View>
-      <ScrollView>
+    <>
+      {/* <ScrollView> */}
         {/* <Text>SampleComponent</Text>
         <SampleComponent/>
         <Text>StylingComponent</Text>
@@ -46,9 +49,13 @@ const App = () => {
         {/* <Communication /> */}
         {/* <BasicJavascript /> */}
         {/* <CallApiWithVanilla /> */}
-        <CallApiWithAxios/> 
-      </ScrollView>
-    </View>
+        {/* <CallApiWithAxios/>  */}
+        {/* <LocalApi/> */}
+        {/* <Pembelajaran/> */}
+        {/* <SlicingUi/> */}
+        <LocalApi/>
+      {/* </ScrollView> */}
+    </>
   );
 };
 
